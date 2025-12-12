@@ -11,9 +11,9 @@ import { CSPostHogProvider } from "./providers";
 
 const font = Raleway({ display: "swap", subsets: ["latin"] });
 
-const Particles = dynamic(() => import("@/components/Particles"), {
-  ssr: false,
-});
+// const Particles = dynamic(() => import("@/components/Particles"), {
+//   ssr: false,
+// });
 
 export const metadata = {
   title: "Jeffrey Lan",
@@ -35,13 +35,11 @@ export default function RootLayout({
             " mih-h-screen max-w-screen overflow-x-hidden flex flex-col font-light"
           }
         >
-          <div className="z-20 flex-none">
-            <Header />
-          </div>
+          {/* <Header /> */}
           <GlobalWrapper>{children}</GlobalWrapper>
           <Footer />
           <Analytics />
-          <Particles />
+          {/* <Particles /> */}
         </body>
       </html>
     </CSPostHogProvider>
