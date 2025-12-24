@@ -1,48 +1,74 @@
-import React from "react";
 import DefaultLayout from "@/components/layout/DefaultLayout";
-import { getProjects } from "../../../sanity/lib/api";
-import { SectionHeader } from "@/components/ui/Typography";
-import * as Card from "@/components/ui/Card";
-import { Col } from "@/components/layout/Col";
-import { ExternalLink } from "lucide-react";
+import { SectionTitle } from "@/components/ui/SectionTitle";
+import { HOME_PAGE_PROJECTS } from "@/constants/my-data";
+import Link from "next/link";
+import { PiArrowUpRightBold } from "react-icons/pi";
 
-export default async function ProjectsPage() {
-  console.log("ProjectsPage");
-
-  const projects = await getProjects();
-
-  // console.log("projects", projects);
+export default function ProjectsPage() {
+  const projects = HOME_PAGE_PROJECTS;
 
   return (
     <DefaultLayout>
-      <div className="py-8 fcenter">
-        <SectionHeader>My Projects</SectionHeader>
+      <div className="relative flex min-h-screen flex-col -mx-4 text-[15px] sm:text-base md:-mx-8">
+        <section className="mx-auto w-full max-w-4xl px-6 pt-12 sm:px-8 sm:pt-16">
+          <SectionTitle>Projects</SectionTitle>
+          <p className="max-w-2xl text-sm text-neutral-400 sm:text-base">
+            A curated set of product and UI experiments focused on clarity,
+            polish, and careful interactions.
+          </p>
+        </section>
+
+        <section className="mx-auto w-full max-w-4xl px-6 pb-16 sm:px-8 sm:pb-20">
+          <div className="grid gap-6 sm:gap-8">
+            {projects.map((project) => (
+              <article
+                key={project.slug}
+                className="group flex flex-col gap-3 border-b border-zinc-800/70 pb-6 last:border-b-0"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-base font-normal text-zinc-100 group-hover:text-zinc-50 trans">
+                    {project.websiteUrl ? (
+                      <Link
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 underline underline-offset-[4px] decoration-zinc-700 hover:decoration-zinc-100 trans"
+                      >
+                        {project.title}
+                        <PiArrowUpRightBold className="size-4 text-neutral-500 group-hover:text-neutral-100 trans" />
+                      </Link>
+                    ) : (
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        className="hover:underline"
+                      >
+                        {project.title}
+                      </Link>
+                    )}
+                  </h3>
+                </div>
+
+                <p className="text-sm leading-relaxed text-neutral-400 sm:text-base">
+                  {project.shortDescription}
+                </p>
+
+                {project.tags?.length ? (
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag.name}
+                        className="rounded-full border border-zinc-800 px-2 py-1 text-[11px] uppercase tracking-wide text-neutral-400"
+                      >
+                        {tag.name}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
-      <Col className="gap-4 sm:gap-6">
-        {projects.map((project) => (
-          <Card.Container key={project.slug} href={`/projects/${project.slug}`}>
-            <Card.Content>
-              <div className="flex justify-between">
-                <Card.Title>{project.title}</Card.Title>
-                {project.websiteUrl && (
-                  <a
-                    href={project.websiteUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:scale-105 trans opacity-90 z-30"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                )}
-              </div>
-              <Card.Description className="line-clamp-none">
-                {project.description}
-              </Card.Description>
-              <Card.Tags tags={project.tags} />
-            </Card.Content>
-          </Card.Container>
-        ))}
-      </Col>
     </DefaultLayout>
   );
 }

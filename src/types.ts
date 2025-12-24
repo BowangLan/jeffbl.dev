@@ -32,19 +32,23 @@ interface DateRange {
 interface Project {
   title: string;
   slug: string;
-  description: string;
+  shortDescription: string;
+  longDescription: string;
   websiteUrl?: string;
   githubUrl?: string;
   dateRange: DateRange;
   tags: Tag[];
   content: any[];
+  current?: boolean;
 }
 
 interface Experience {
   title: string;
   slug: string;
   organization: string;
-  description: string;
+  location: string;
+  shortDescription: string;
+  longDescription: string;
   content: string;
   dateRange: DateRange;
 }

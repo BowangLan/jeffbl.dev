@@ -4,6 +4,9 @@ export const GITHUB_URL = "https://github.com/BowangLan";
 export const EMAIL_URL = "mailto:blan2@uw.edu";
 export const RESUME_URL = "/Jeffrey Lan Resume.pdf";
 
+export const EMAIL_1_URL = "blan2@uw.edu";
+export const EMAIL_2_URL = "jeffreylan85917@gmail.com";
+
 export const COLOR_TEXT = "rgb(239, 242, 250)";
 export const COLOR_BACKGROUND = "rgb(7, 9, 13)";
 export const COLOR_PRIMARY = "rgb(52, 93, 225)";

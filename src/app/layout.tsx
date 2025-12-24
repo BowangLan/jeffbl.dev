@@ -2,15 +2,22 @@ import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 // import Particles from "@/components/Particles";
-import { Raleway } from "next/font/google";
-// import { GeistSans } from "geist/font";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GlobalWrapper } from "@/components/GlobalWrapper";
 import dynamic from "next/dynamic";
-import { CSPostHogProvider } from "./providers";
+import { GlobalProviders } from "./providers";
+import { TopBlur } from "@/components/TopBlur";
 
-const font = Raleway({ display: "swap", subsets: ["latin"] });
+const fontSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
+const fontMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 // const Particles = dynamic(() => import("@/components/Particles"), {
 //   ssr: false,
 // });
@@ -27,21 +34,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <CSPostHogProvider>
-      <html lang="en">
+    <GlobalProviders>
+      <html lang="en" className="dark">
         <body
-          className={
-            font.className +
-            " mih-h-screen max-w-screen overflow-x-hidden flex flex-col font-light"
-          }
+          className={`${fontSans.variable} ${fontMono.variable} min-h-screen bg-[#1a1a1a] max-w-screen overflow-x-hidden flex flex-col font-light antialiased relative`}
         >
           {/* <Header /> */}
-          <GlobalWrapper>{children}</GlobalWrapper>
+          {/* <TopBlur /> */}
+          {children}
           <Footer />
           <Analytics />
-          {/* <Particles /> */}
         </body>
       </html>
-    </CSPostHogProvider>
+    </GlobalProviders>
   );
 }

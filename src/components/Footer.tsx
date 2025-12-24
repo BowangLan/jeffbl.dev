@@ -9,17 +9,19 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative z-10 flex-none w-full py-6 space-y-3 md:space-y-4 px-page fcenter"
+      className="relative z-10 w-full pt-10 pb-12"
       style={{
-        display: pathname === "/admin" ? "none" : "flex",
+        display: pathname === "/admin" ? "none" : "block",
       }}
     >
-      <div>
-        <span className="text-sm text-gray-300">
-          &copy; {new Date().getFullYear()} Jeffrey Lan. All rights reserved.
-        </span>
+      <div className="mx-auto w-full max-w-4xl px-6 sm:px-8">
+        <div className="flex flex-col gap-6 border-t border-zinc-700 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <span className="text-sm text-neutral-400">
+            &copy; {new Date().getFullYear()} Jeffrey Lan
+          </span>
+          {/* <SocialMedia size="sm" /> */}
+        </div>
       </div>
-      <SocialMedia size="sm" />
     </footer>
   );
 }
