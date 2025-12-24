@@ -18,7 +18,7 @@ export function SectionTitle({
         {children}
       </h2>
 
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-zinc-700 to-zinc-700/50" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-zinc-700 to-zinc-700/50" />
     </div>
   );
 }

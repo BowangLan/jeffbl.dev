@@ -17,7 +17,7 @@ export default async function Home() {
   console.log("render home page");
   return (
     <DefaultLayout>
-      <section className="h-[var(--h-main)] fcenter">
+      <section className="h-(--h-main) fcenter">
         <div className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 md:text-4xl">
           <h1 className="text-[2rem] text-center tracking-normal sm:text-[2.5rem] md:text-[3.25rem] lg:text-[3.5rem] 2xl:text-[4rem] sm:tracking-wider">
             Hello, {"I'm "}

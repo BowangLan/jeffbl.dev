@@ -32,7 +32,7 @@ function TagCircle({ tag }: { tag: Tag }) {
   // const [isPresent, safeToRemove] = usePresence();
   return (
     <div
-      className="flex flex-col items-center hover:bg-[var(--bg-hover)] trans bg-slate-400/10 rounded-lg p-2"
+      className="flex flex-col items-center hover:bg-(--bg-hover) trans bg-slate-400/10 rounded-lg p-2"
       style={{
         width: 120,
         height: 120,
@@ -48,7 +48,7 @@ function TagCircle({ tag }: { tag: Tag }) {
       // onAnimationComplete={() => !isPresent && safeToRemove()}
       // transition={transition}
     >
-      <div className="relative flex-none translate-y-1.5 -translate-x-0 fcenter h-3/5">
+      <div className="relative flex-none translate-y-1.5 translate-x-0 fcenter h-3/5">
         <Image
           src={"/icons/" + (tag.iconFileName || tag.slug + ".svg")}
           alt={tag.name}

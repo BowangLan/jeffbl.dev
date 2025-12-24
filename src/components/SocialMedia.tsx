@@ -49,7 +49,7 @@ function SocialMediaItem({
 }) {
   return (
     <a
-      className={`rounded-lg hover:scale-95 bg-gray-100/20 hover:bg-[var(--primary)] fcenter relative cursor-pointer trans group overflow-hidden`}
+      className={`rounded-lg hover:scale-95 bg-gray-100/20 hover:bg-(--primary) fcenter relative cursor-pointer trans group overflow-hidden`}
       target="_blank"
       style={{
         width: SizeMap.container[size],

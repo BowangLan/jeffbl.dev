@@ -40,7 +40,7 @@ export function ExperienceCard({
       //     },
       //   },
       // }}
-      className="w-full flex flex-col space-y-1 cursor-default md:px-4 md:py-4 lg:p-6 lg:space-y-2 trans md:hover:bg-[var(--bg-hover)] rounded-lg"
+      className="w-full flex flex-col space-y-1 cursor-default md:px-4 md:py-4 lg:p-6 lg:space-y-2 trans md:hover:bg-(--bg-hover) rounded-lg"
       style={{
         alignItems: align === "left" ? "flex-start" : "flex-end",
       }}
@@ -124,7 +124,7 @@ export function ExperienceList({ experiences }: { experiences: Experience[] }) {
                   />
                   <VSpacer className="lg:w-8" />
                 </div>
-                <Dot className="translate-x-[1px] translate-y-7" />
+                <Dot className="translate-x-px translate-y-7" />
                 <div className="flex items-start flex-1 lg:-translate-y-2">
                   <VSpacer className="w-3 lg:w-4" />
                   <ExperienceCard
@@ -143,7 +143,7 @@ export function ExperienceList({ experiences }: { experiences: Experience[] }) {
                     key={experience.slug}
                   />
                 </div>
-                <Dot className="translate-x-[1px] translate-y-7" />
+                <Dot className="translate-x-px translate-y-7" />
                 <div className="flex items-start flex-1 pt-5">
                   <VSpacer className="lg:w-8" />
                   <DateRange

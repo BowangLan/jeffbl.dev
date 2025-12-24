@@ -32,7 +32,7 @@ export default function ProjectsPage() {
                         href={project.websiteUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 underline underline-offset-[4px] decoration-zinc-700 hover:decoration-zinc-100 trans"
+                        className="inline-flex items-center gap-2 underline underline-offset-4 decoration-zinc-700 hover:decoration-zinc-100 trans"
                       >
                         {project.title}
                         <PiArrowUpRightBold className="size-4 text-neutral-500 group-hover:text-neutral-100 trans" />

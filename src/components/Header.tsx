@@ -67,7 +67,7 @@ export default function Header() {
 
   return (
     <header
-      className="relative flex items-center justify-between h-[var(--h-header)] px-page trans"
+      className="relative flex items-center justify-between h-(--h-header) px-page trans"
       style={{
         display: pathname.startsWith("/admin") ? "none" : "flex",
       }}

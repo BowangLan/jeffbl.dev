@@ -12,7 +12,7 @@ export function TagPill({
       key={tag.name}
       className="inline-flex items-center px-4 py-2 text-white rounded-full cursor-default bg-blue-500/20 hover:bg-blue-500/40 trans"
     >
-      <div className="relative mr-1 lg:mr-1.5 -translate-x-0 fcenter">
+      <div className="relative mr-1 lg:mr-1.5 translate-x-0 fcenter">
         <Image
           src={"/icons/" + (tag.iconFileName || tag.slug + ".svg")}
           alt={tag.name}

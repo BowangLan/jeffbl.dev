@@ -70,7 +70,7 @@ export function MobileMenu() {
         <MenuToggle toggle={() => toggleOpen()} />
       </div>
       <motion.div
-        className="fixed z-10 w-full lg:max-w-xl backdrop-blur-sm inset-0 bg-[var(--bg-mobile-menu)]"
+        className="fixed z-10 w-full lg:max-w-xl backdrop-blur-xs inset-0 bg-(--bg-mobile-menu)"
         variants={menuContainerVariants}
       >
         <motion.div
