@@ -71,7 +71,7 @@ export function MobileMenu() {
       </div>
       <motion.div
         className="fixed z-10 w-full lg:max-w-xl backdrop-blur-xs inset-0 bg-(--bg-mobile-menu)"
-        variants={menuContainerVariants}
+        // variants={menuContainerVariants}
       >
         <motion.div
           className="flex flex-col items-center justify-center h-full space-y-6 text-base font-medium text-center text-white"
