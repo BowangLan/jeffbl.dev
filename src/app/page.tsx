@@ -3,8 +3,8 @@ import { FeaturedProjectsSection } from "@/components/FeaturedProjectsSection";
 import { ExperienceTimelineSection } from "@/components/ExperienceTimelineSection";
 import { HomeNavigation } from "@/components/HomeNavigation";
 import { HomeHero } from "@/components/HomeHero";
-import { HOME_PAGE_PROJECTS, HOME_PAGE_EXPERIENCES } from "@/constants/my-data";
 import { ConnectSection } from "@/components/home/ConnectSection";
+import { BuildStackSection } from "@/components/home/BuildStackSection";
 
 export default function Home() {
   return (
@@ -18,6 +18,8 @@ export default function Home() {
           <FeaturedProjectsSection />
 
           <ExperienceTimelineSection />
+
+          <BuildStackSection />
 
           <ConnectSection />
         </div>
