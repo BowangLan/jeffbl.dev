@@ -8,7 +8,7 @@ export function SectionTitle({
   className?: string;
 }) {
   return (
-    <div className="flex items-center justify-between py-4 mb-6 relative">
+    <div className="flex items-center justify-between py-4 mb-6 sm:mb-8 relative">
       <h2
         className={cn(
           "text-xl font-normal text-neutral-100 motion-preset-blur-right-sm",
