@@ -1,3 +1,127 @@
+export const TECH_TAGS: Record<string, Tag> = {
+  // programming languages
+  javascript: {
+    slug: "javascript",
+    name: "JavaScript",
+    categories: [],
+  },
+  typescript: {
+    slug: "typescript",
+    name: "TypeScript",
+    categories: [],
+  },
+  python: {
+    slug: "python",
+    name: "Python",
+    categories: [],
+  },
+  java: {
+    slug: "java",
+    name: "Java",
+    categories: [],
+  },
+
+  // styling
+  tailwindcss: {
+    slug: "tailwindcss",
+    name: "Tailwind CSS",
+    categories: [],
+  },
+  shadcn: {
+    slug: "shadcn",
+    name: "Shadcn",
+    categories: [],
+  },
+  motion: {
+    slug: "motion",
+    name: "Motion (Framer Motion)",
+    categories: [],
+  },
+
+  // frameworks
+  react: {
+    slug: "react",
+    name: "React",
+    categories: [],
+  },
+  nextjs: {
+    slug: "nextjs",
+    name: "Next.js",
+    categories: [],
+  },
+  tanstackstart: {
+    slug: "tanstackstart",
+    name: "TanStack Start",
+    categories: [],
+  },
+  electron: {
+    slug: "electron",
+    name: "Electron",
+    categories: [],
+  },
+  reactnative: {
+    slug: "reactnative",
+    name: "React Native",
+    categories: [],
+  },
+  expo: {
+    slug: "expo",
+    name: "Expo",
+    categories: [],
+  },
+
+  // databases
+  convex: {
+    slug: "convex",
+    name: "Convex",
+    categories: [],
+  },
+  postgresql: {
+    slug: "postgresql",
+    name: "PostgreSQL",
+    categories: [],
+  },
+  redis: {
+    slug: "redis",
+    name: "Redis",
+    categories: [],
+  },
+
+  // deployment
+  vercel: {
+    slug: "vercel",
+    name: "Vercel",
+    categories: [],
+  },
+  railway: {
+    slug: "railway",
+    name: "Railway",
+    categories: [],
+  },
+
+  // dev tools
+  git: {
+    slug: "git",
+    name: "Git",
+    categories: [],
+  },
+  github: {
+    slug: "github",
+    name: "GitHub",
+    categories: [],
+  },
+  docker: {
+    slug: "docker",
+    name: "Docker",
+    categories: [],
+  },
+  mcp: {
+    slug: "mcp",
+    name: "MCP",
+    categories: [],
+  },
+} as const;
+
 export const HOME_PAGE_PROJECTS: Project[] = [
   {
     title: "YouTube Muse",
@@ -10,13 +134,10 @@ export const HOME_PAGE_PROJECTS: Project[] = [
       ongoing: true,
     },
     tags: [
-      {
-        slug: "react",
-        name: "React",
-        iconFileName: "react.svg",
-        iconScale: 1,
-        categories: [],
-      },
+      // TECH_TAGS.typescript,
+      // TECH_TAGS.react,
+      TECH_TAGS.nextjs,
+      TECH_TAGS.motion,
     ],
     content: [],
     current: true,
@@ -32,20 +153,10 @@ export const HOME_PAGE_PROJECTS: Project[] = [
       ongoing: true,
     },
     tags: [
-      {
-        slug: "react",
-        name: "React",
-        iconFileName: "react.svg",
-        iconScale: 1,
-        categories: [],
-      },
-      {
-        slug: "typescript",
-        name: "TypeScript",
-        iconFileName: "typescript.svg",
-        iconScale: 1,
-        categories: [],
-      },
+      // TECH_TAGS.react,
+      // TECH_TAGS.typescript,
+      TECH_TAGS.nextjs,
+      TECH_TAGS.convex,
     ],
     content: [],
     current: true,
@@ -61,20 +172,11 @@ export const HOME_PAGE_PROJECTS: Project[] = [
       ongoing: true,
     },
     tags: [
-      {
-        slug: "react",
-        name: "React",
-        iconFileName: "react.svg",
-        iconScale: 1,
-        categories: [],
-      },
-      {
-        slug: "typescript",
-        name: "TypeScript",
-        iconFileName: "typescript.svg",
-        iconScale: 1,
-        categories: [],
-      },
+      // TECH_TAGS.react,
+      // TECH_TAGS.typescript,
+      TECH_TAGS.nextjs,
+      TECH_TAGS.convex,
+      TECH_TAGS.mcp,
     ],
     content: [],
     current: true,
@@ -90,13 +192,11 @@ export const HOME_PAGE_PROJECTS: Project[] = [
       ongoing: true,
     },
     tags: [
-      {
-        slug: "typescript",
-        name: "TypeScript",
-        iconFileName: "typescript.svg",
-        iconScale: 1,
-        categories: [],
-      },
+      // TECH_TAGS.typescript,
+      // TECH_TAGS.react,
+      TECH_TAGS.electron,
+      TECH_TAGS.tailwindcss,
+      TECH_TAGS.shadcn,
     ],
     content: [],
     current: true,
@@ -111,7 +211,13 @@ export const HOME_PAGE_PROJECTS: Project[] = [
       start: "2025-11-01",
       ongoing: true,
     },
-    tags: [],
+    tags: [
+      // TECH_TAGS.react,
+      // TECH_TAGS.typescript,
+      TECH_TAGS.tanstackstart,
+      TECH_TAGS.convex,
+      TECH_TAGS.postgresql,
+    ],
     content: [],
     current: true,
   },

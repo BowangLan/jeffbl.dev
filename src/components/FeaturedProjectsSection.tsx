@@ -34,7 +34,7 @@ export function FeaturedProjectsSection() {
               </p>
 
               {/* Stack */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 {project.tags.map((tag) => (
                   <span
                     key={tag.slug}
