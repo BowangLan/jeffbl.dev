@@ -36,6 +36,16 @@ export default function RootLayout({
   return (
     <GlobalProviders>
       <html lang="en" className="dark">
+        <head>
+          {/* umami analytics */}
+          {process.env.NODE_ENV === "production" && (
+            <script
+              defer
+              src="https://umami-production-252d.up.railway.app/script.js"
+              data-website-id="6f8d7dc6-7169-4301-bafa-ef4347014341"
+            ></script>
+          )}
+        </head>
         <body
           className={`${fontSans.variable} ${fontMono.variable} bg-neutral-900 min-h-screen max-w-screen overflow-x-hidden flex flex-col font-light antialiased relative`}
         >
