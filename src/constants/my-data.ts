@@ -145,7 +145,7 @@ export const HOME_PAGE_PROJECTS: Project[] = [
   {
     title: "Husky Search",
     slug: "husky-search",
-    shortDescription: "Course searching & planning web app students at University of Washington",
+    shortDescription: "Course searching & planning web app for students at University of Washington",
     longDescription: "Designed an interactive course-exploration experience that replaced static university catalogs with a dynamic, graph-based UI for reasoning about prerequisites and schedules. Built high-fidelity interactive prototypes using ReactFlow to validate UX assumptions before committing to full implementation. Automated live data ingestion to ensure the UI reflected real-time course availability without manual updates.",
     websiteUrl: "https://huskysearch.fyi",
     dateRange: {
