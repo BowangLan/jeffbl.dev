@@ -182,7 +182,7 @@ export function GitHubContributionsSection() {
                   </div> */}
 
                   {/* Graph */}
-                  <div className="">
+                  <div className="p-1">
                     <div className="flex gap-[3px]">
                       {weeks.map((week, weekIndex) => (
                         <div
