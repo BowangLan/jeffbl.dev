@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { SectionTitle } from "@/components/ui/title";
 import { HOME_PAGE_EXPERIENCES } from "@/constants/my-data";
 import { formatDate } from "@/lib/utils";
 

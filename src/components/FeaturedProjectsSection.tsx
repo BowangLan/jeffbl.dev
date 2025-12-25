@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { SectionTitle } from "@/components/ui/title";
 import { ExternalLink } from "./Link";
 import { HOME_PAGE_PROJECTS } from "@/constants/my-data";
 import { TeckStackIcons } from "./TechStack";

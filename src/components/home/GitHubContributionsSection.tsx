@@ -1,8 +1,14 @@
 "use client";
 
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { SectionTitle } from "@/components/ui/title";
 import { useEffect, useState } from "react";
 import { GITHUB_URL } from "@/constants";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ContributionDay {
   date: string;
@@ -160,9 +166,10 @@ export function GitHubContributionsSection() {
                 Loading...
               </div>
             ) : (
-              <div className="relative">
-                {/* Day labels */}
-                {/* <div className="absolute left-0 top-0 flex flex-col gap-[3px] text-[10px] text-neutral-500 pt-3">
+              <TooltipProvider delayDuration={0}>
+                <div className="relative">
+                  {/* Day labels */}
+                  {/* <div className="absolute left-0 top-0 flex flex-col gap-[3px] text-[10px] text-neutral-500 pt-3">
                     {dayLabels.map((day, i) => (
                       <div
                         key={day}
@@ -174,36 +181,40 @@ export function GitHubContributionsSection() {
                     ))}
                   </div> */}
 
-                {/* Graph */}
-                <div className="">
-                  <div className="flex gap-[3px]">
-                    {weeks.map((week, weekIndex) => (
-                      <div key={weekIndex} className="flex flex-col gap-[3px]">
-                        {week.days.map((day, dayIndex) => {
-                          return (
-                            <div
-                              key={day.date}
-                              className={`w-[10px] h-[10px] sm:h-[11px] sm:w-[11px] rounded-sm ${getLevelColor(
-                                day.level
-                              )} hover:ring-1 hover:ring-neutral-400 trans cursor-default group/day relative`}
-                              title={`${day.count} contributions on ${day.date}`}
-                              // style={{
-                              //   borderRadius: "2px",
-                              // }}
-                            >
-                              {/* Tooltip on hover */}
-                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 border border-neutral-700 rounded text-xs text-neutral-100 whitespace-nowrap opacity-0 group-hover/day:opacity-100 trans pointer-events-none z-10">
-                                {day.count} contribution
-                                {day.count !== 1 ? "s" : ""} on {day.date}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ))}
+                  {/* Graph */}
+                  <div className="">
+                    <div className="flex gap-[3px]">
+                      {weeks.map((week, weekIndex) => (
+                        <div
+                          key={weekIndex}
+                          className="flex flex-col gap-[3px]"
+                        >
+                          {week.days.map((day) => {
+                            return (
+                              <Tooltip key={day.date}>
+                                <TooltipTrigger asChild>
+                                  <div
+                                    className={`w-[10px] h-[10px] sm:h-[11px] sm:w-[11px] rounded-sm ${getLevelColor(
+                                      day.level
+                                    )} hover:ring-1 hover:ring-neutral-400 trans cursor-default`}
+                                  />
+                                </TooltipTrigger>
+                                <TooltipContent
+                                  className="bg-neutral-900 border border-neutral-700 text-neutral-100"
+                                  sideOffset={8}
+                                >
+                                  {day.count} contribution
+                                  {day.count !== 1 ? "s" : ""} on {day.date}
+                                </TooltipContent>
+                              </Tooltip>
+                            );
+                          })}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </TooltipProvider>
             )}
           </div>
         </div>

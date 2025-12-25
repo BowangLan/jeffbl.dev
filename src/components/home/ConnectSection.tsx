@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { SectionTitle } from "@/components/ui/title";
 import { ExternalLink } from "../Link";
 import { EMAIL_1_URL, EMAIL_2_URL, LINKEDIN_URL } from "@/constants";
 import { FaLinkedinIn } from "react-icons/fa";
