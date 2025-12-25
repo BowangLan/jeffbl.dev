@@ -1,3 +1,5 @@
+"use client";
+
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { HOME_PAGE_PROJECTS } from "@/constants/my-data";
