@@ -10,7 +10,7 @@ export function FeaturedProjectsSection() {
   return (
     <section className="mx-auto w-full max-w-4xl px-6 sm:px-8">
       <div>
-        <SectionTitle>Current Projects</SectionTitle>
+        <SectionTitle>Projects</SectionTitle>
 
         <div className="grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3 gap-y-8">
           {projects.map((project) => (

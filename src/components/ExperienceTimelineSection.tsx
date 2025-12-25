@@ -17,7 +17,7 @@ export function ExperienceTimelineSection() {
   return (
     <section className="mx-auto w-full max-w-4xl px-6 sm:px-8">
       <div>
-        <SectionTitle className="text-lg sm:text-xl">Now</SectionTitle>
+        <SectionTitle className="text-lg sm:text-xl">Experiences</SectionTitle>
 
         <div className="space-y-10 sm:pl-[27%]">
           {experiences.map((experience) => (
