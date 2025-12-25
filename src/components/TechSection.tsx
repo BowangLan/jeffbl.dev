@@ -49,12 +49,12 @@ function TagCircle({ tag }: { tag: Tag }) {
       // transition={transition}
     >
       <div className="relative flex-none translate-y-1.5 translate-x-0 fcenter h-3/5">
-        <Image
+        {/* <Image
           src={"/icons/" + (tag.iconFileName || tag.slug + ".svg")}
           alt={tag.name}
           width={40 * (tag.iconScale || 1)}
           height={40 * (tag.iconScale || 1)}
-        />
+        /> */}
       </div>
       <div className="text-sm text-center">{tag.name}</div>
     </div>
