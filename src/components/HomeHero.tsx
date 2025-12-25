@@ -3,10 +3,19 @@ import { ExternalLink } from "./Link";
 import { FaFilePdf, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/constants";
 
-const HERO_TEXT_1 =
-  "I'm a University New Grad from UW. I've been coding for the past 6 years. Nowadays, I built user-centric software to solve real-world problems.";
+const HERO_TEXT_1 = `
+
+<p>
+I'm a software engineer based in <span class='font-medium text-zinc-100'>Seattle, WA</span> building modern full-stack web & mobile applications. 
+</p>
+<p>I enjoy crafting clean interfaces, reliable systems, and the small details that make software feel well-made, while also focusing on using up-to-date technologies and best practices</p>
+</p>
+
+`.trim();
 
 const HERO_SUBTEXT = "Full-Stack Developer, New Grad";
+
+const LOCATION = "Seattle, WA, USA";
 
 export function HomeHero() {
   return (
@@ -14,7 +23,7 @@ export function HomeHero() {
       <div className="flex flex-col gap-8">
         <div>
           <div className="flex items-center gap-2 justify-between">
-            <h1 className="text-2xl font-normal tracking-tight text-white sm:text-2xl md:text-3xl">
+            <h1 className="text-2xl font-normal tracking-tight text-zinc-50 sm:text-2xl md:text-3xl">
               Jeffrey Lan
             </h1>
           </div>
@@ -26,9 +35,10 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 text-base leading-relaxed text-neutral-200 sm:text-lg">
-          <p>{HERO_TEXT_1}</p>
-        </div>
+        <div
+          className="flex flex-col gap-4 text-base leading-relaxed text-neutral-300 sm:text-lg"
+          dangerouslySetInnerHTML={{ __html: HERO_TEXT_1 }}
+        ></div>
 
         <div>
           <div className="flex items-center gap-6 sm:gap-8">
