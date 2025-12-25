@@ -1,7 +1,7 @@
 "use client";
 
 import DefaultLayout from "@/components/layout/DefaultLayout";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PageTitle } from "@/components/ui/title";
 import { HOME_PAGE_PROJECTS } from "@/constants/my-data";
 import Link from "next/link";
 import { PiArrowUpRightBold } from "react-icons/pi";
@@ -13,11 +13,7 @@ export default function ProjectsPage() {
     <DefaultLayout active="/projects">
       <div className="relative flex min-h-screen flex-col -mx-4 text-[15px] sm:text-base md:-mx-8">
         <section className="mx-auto w-full max-w-4xl px-6 pt-12 sm:px-8 sm:pt-16">
-          <SectionTitle>Projects</SectionTitle>
-          <p className="max-w-2xl text-sm text-neutral-400 sm:text-base">
-            A curated set of product and UI experiments focused on clarity,
-            polish, and careful interactions.
-          </p>
+          <PageTitle>My Projects</PageTitle>
         </section>
 
         <section className="mx-auto w-full max-w-4xl px-6 pb-16 sm:px-8 sm:pb-20">
