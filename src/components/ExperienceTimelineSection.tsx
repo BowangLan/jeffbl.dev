@@ -23,7 +23,7 @@ export function ExperienceTimelineSection() {
           {experiences.map((experience) => (
             <article key={experience.slug} className="flex flex-col gap-3">
               <div className="flex flex-col gap-1.5">
-                <div className="flex items-baseline gap-3">
+                <div className="flex sm:items-baseline flex-col sm:flex-row gap-3">
                   <h3 className="text-base/tight font-normal text-neutral-100">
                     {experience.organization}
                   </h3>
