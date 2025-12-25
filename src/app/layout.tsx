@@ -37,8 +37,10 @@ export default function RootLayout({
     <GlobalProviders>
       <html lang="en" className="dark">
         <body
-          className={`${fontSans.variable} ${fontMono.variable} min-h-screen bg-[#1a1a1a] max-w-screen overflow-x-hidden flex flex-col font-light antialiased relative`}
+          className={`${fontSans.variable} ${fontMono.variable} min-h-screen max-w-screen overflow-x-hidden flex flex-col font-light antialiased relative`}
         >
+          {/* background overlay */}
+          <div className="fixed inset-0 bg-linear-to-b from-neutral-800/90 to-neutral-800/50 pointer-events-none" />
           {/* <Header /> */}
           {/* <TopBlur /> */}
           {children}
