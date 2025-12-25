@@ -7,6 +7,7 @@ import { HomeNavigation } from "@/components/HomeNavigation";
 import { HomeHero } from "@/components/HomeHero";
 import { ConnectSection } from "@/components/home/ConnectSection";
 import { BuildStackSection } from "@/components/home/BuildStackSection";
+import { GitHubContributionsSection } from "@/components/home/GitHubContributionsSection";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -32,6 +33,16 @@ export default function Home() {
           >
             <FeaturedProjectsSection />
           </motion.div>
+
+{/* 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+          >
+            <GitHubContributionsSection />
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

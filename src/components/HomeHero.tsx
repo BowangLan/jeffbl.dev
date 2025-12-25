@@ -2,6 +2,7 @@ import { SocialMedia } from "@/components/SocialMedia";
 import { ExternalLink } from "./Link";
 import { FaFilePdf, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/constants";
+import { GitHubContributionsSection } from "./home/GitHubContributionsSection";
 
 const HERO_TEXT_1 = `
 
@@ -79,6 +80,8 @@ export function HomeHero() {
             </a> */}
           </div>
         </div>
+
+        <GitHubContributionsSection />
       </div>
     </section>
   );
