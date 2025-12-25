@@ -9,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "motion/react";
 
 interface ContributionDay {
   date: string;
@@ -24,6 +25,9 @@ export function GitHubContributionsSection() {
   const [weeks, setWeeks] = useState<ContributionWeek[]>([]);
   const [totalContributions, setTotalContributions] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [hoveredLegendLevel, setHoveredLegendLevel] = useState<number | null>(
+    null
+  );
 
   useEffect(() => {
     fetchContributionData();
@@ -122,6 +126,22 @@ export function GitHubContributionsSection() {
     }
   };
 
+  const getLevelStats = (level: number) => {
+    let dayCount = 0;
+    let contributionCount = 0;
+
+    weeks.forEach((week) => {
+      week.days.forEach((day) => {
+        if (day.level === level) {
+          dayCount++;
+          contributionCount += day.count;
+        }
+      });
+    });
+
+    return { dayCount, contributionCount };
+  };
+
   const monthLabels = [
     "Jan",
     "Feb",
@@ -190,13 +210,23 @@ export function GitHubContributionsSection() {
                           className="flex flex-col gap-[3px]"
                         >
                           {week.days.map((day) => {
+                            const isHighlighted =
+                              hoveredLegendLevel !== null &&
+                              day.level === hoveredLegendLevel;
+                            const isDimmed =
+                              hoveredLegendLevel !== null &&
+                              day.level !== hoveredLegendLevel;
                             return (
                               <Tooltip key={day.date}>
                                 <TooltipTrigger asChild>
                                   <div
                                     className={`w-[10px] h-[10px] sm:h-[11px] sm:w-[11px] rounded-sm ${getLevelColor(
                                       day.level
-                                    )} hover:ring-1 hover:ring-neutral-400 trans cursor-default`}
+                                    )} hover:ring-1 hover:ring-neutral-400 trans cursor-default ${
+                                      isHighlighted
+                                        ? "ring-2 ring-neutral-300 scale-110"
+                                        : ""
+                                    } ${isDimmed ? "opacity-30" : ""}`}
                                   />
                                 </TooltipTrigger>
                                 <TooltipContent
@@ -220,17 +250,65 @@ export function GitHubContributionsSection() {
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-2 text-xs text-neutral-500">
-          <span>Less</span>
-          <div className="flex gap-[3px]">
-            {[0, 1, 2, 3, 4].map((level) => (
-              <div
-                key={level}
-                className={`w-[10px] h-[10px] rounded-sm ${getLevelColor(level)}`}
-              />
-            ))}
+        <div className="flex flex-col gap-3">
+          {/* <div className="flex items-center gap-2 text-xs text-neutral-500">
+            <span>Less</span>
+            <div className="flex gap-[3px]">
+              {[0, 1, 2, 3, 4].map((level) => (
+                <div
+                  key={level}
+                  className={`w-[10px] h-[10px] rounded-sm ${getLevelColor(level)} cursor-pointer hover:ring-1 hover:ring-neutral-400 trans ${
+                    hoveredLegendLevel === level ? "ring-2 ring-neutral-300" : ""
+                  }`}
+                  onMouseEnter={() => setHoveredLegendLevel(level)}
+                  onMouseLeave={() => setHoveredLegendLevel(null)}
+                />
+              ))}
+            </div>
+            <span>More</span>
+          </div> */}
+
+          {/* Stats display */}
+          <div className="flex flex-row">
+            {[0, 1, 2, 3, 4].map((level) => {
+              const stats = getLevelStats(level);
+              const avgPerDay =
+                stats.dayCount > 0
+                  ? (stats.contributionCount / stats.dayCount).toFixed(1)
+                  : "0.0";
+              const isHovered = hoveredLegendLevel === level;
+              return (
+                <div
+                  key={level}
+                  className={`flex flex-row items-center gap-1.5 px-2.5 py-1.5 rounded-md trans cursor-pointer ${
+                    isHovered
+                      ? "bg-neutral-800/50 text-neutral-200"
+                      : "text-neutral-500"
+                  }`}
+                  onMouseEnter={() => setHoveredLegendLevel(level)}
+                  onMouseLeave={() => setHoveredLegendLevel(null)}
+                >
+                  <div
+                    className={`w-3 h-3 rounded-sm ${getLevelColor(level)}`}
+                  />
+                  <div className="font-medium text-xs trans">
+                    {stats.dayCount} day{stats.dayCount !== 1 ? "s" : ""}
+                  </div>
+                  {/* <div
+                    className={`trans ${isHovered ? "text-neutral-400" : "text-neutral-600"}`}
+                  >
+                    {stats.contributionCount} contribution
+                    {stats.contributionCount !== 1 ? "s" : ""}
+                  </div> */}
+                  {/* <div
+                    className={`trans text-[10px] ${isHovered ? "text-neutral-400" : "text-neutral-600"}`}
+                  >
+                    Avg. {avgPerDay} per day
+                  </div> */}
+                </div>
+              );
+            })}
           </div>
-          <span>More</span>
         </div>
       </div>
     </div>
