@@ -1,13 +1,8 @@
-import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 // import Particles from "@/components/Particles";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { GlobalWrapper } from "@/components/GlobalWrapper";
-import dynamic from "next/dynamic";
 import { GlobalProviders } from "./providers";
-import { TopBlur } from "@/components/TopBlur";
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -55,7 +50,6 @@ export default function RootLayout({
           {/* <TopBlur /> */}
           {children}
           <Footer />
-          <Analytics />
         </body>
       </html>
     </GlobalProviders>
