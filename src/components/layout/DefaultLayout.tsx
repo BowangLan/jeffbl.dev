@@ -23,14 +23,17 @@ export default function DefaultLayout({
             [VARIANTS.INITIAL]: {
               opacity: 0,
               y: 20,
+              filter: "blur(4px)",
             },
             [VARIANTS.VISIBLE]: {
               opacity: 1,
               y: 0,
+              filter: "blur(0px)",
             },
             [VARIANTS.EXIT]: {
               opacity: 0,
               y: 20,
+              filter: "blur(4px)",
             },
           }}
           initial={VARIANTS.INITIAL}
