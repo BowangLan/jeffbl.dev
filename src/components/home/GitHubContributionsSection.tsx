@@ -112,7 +112,7 @@ export function GitHubContributionsSection() {
       case 1:
         return "bg-neutral-700/60";
       case 2:
-        return "bg-neutral-600/70";
+        return "bg-neutral-500/85";
       case 3:
         return "bg-neutral-400/85";
       case 4:
