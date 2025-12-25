@@ -18,7 +18,7 @@ export function ExternalLink({
       target="_blank"
       rel="noreferrer"
       className={cn(
-        "group/external-link inline-flex tracking-tight items-center underline underline-offset-4 decoration-zinc-700 hover:decoration-zinc-100 trans",
+        "group/external-link inline-flex tracking-tight items-center underline underline-offset-4 decoration-neutral-700 hover:decoration-neutral-100 trans",
         inline && "inline-flex items-center",
         className
       )}

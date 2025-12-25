@@ -15,7 +15,7 @@ export default function Footer() {
       }}
     >
       <div className="mx-auto w-full max-w-4xl px-6 sm:px-8">
-        <div className="flex flex-col gap-6 border-t border-zinc-700 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-6 border-t border-neutral-700 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <span className="text-sm text-neutral-400">
             &copy; {new Date().getFullYear()} Jeffrey Lan
           </span>

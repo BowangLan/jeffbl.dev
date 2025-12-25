@@ -23,16 +23,16 @@ export default function ProjectsPage() {
             {projects.map((project) => (
               <article
                 key={project.slug}
-                className="group flex flex-col gap-3 border-b border-zinc-800/70 pb-6 last:border-b-0"
+                className="group flex flex-col gap-3 border-b border-neutral-800/70 pb-6 last:border-b-0"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-base font-normal text-zinc-100 group-hover:text-zinc-50 trans">
+                  <h3 className="text-base font-normal text-neutral-100 group-hover:text-neutral-50 trans">
                     {project.websiteUrl ? (
                       <Link
                         href={project.websiteUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 underline underline-offset-4 decoration-zinc-700 hover:decoration-zinc-100 trans"
+                        className="inline-flex items-center gap-2 underline underline-offset-4 decoration-neutral-700 hover:decoration-neutral-100 trans"
                       >
                         {project.title}
                         <PiArrowUpRightBold className="size-4 text-neutral-500 group-hover:text-neutral-100 trans" />
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag.name}
-                        className="rounded-full border border-zinc-800 px-2 py-1 text-[11px] uppercase tracking-wide text-neutral-400"
+                        className="rounded-full border border-neutral-800 px-2 py-1 text-[11px] uppercase tracking-wide text-neutral-400"
                       >
                         {tag.name}
                       </span>

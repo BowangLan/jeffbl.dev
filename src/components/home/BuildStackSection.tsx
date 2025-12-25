@@ -2,12 +2,12 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 
 const BUILD_STACK = [
   {
-    label: "Websites",
-    items: ["Next.js", "shadcn/ui", "Tailwind CSS"],
+    label: "Framework",
+    items: ["Next.js", "TanStack Start", "Electron", "React Native", "Expo"],
   },
   {
     label: "Database",
-    items: ["Convex"],
+    items: ["Convex", "PostgreSQL", "Redis"],
   },
   {
     label: "Deployment",
@@ -21,7 +21,7 @@ export function BuildStackSection() {
       <div>
         <SectionTitle>Build Stack</SectionTitle>
 
-        <p className="text-sm leading-relaxed text-neutral-400">
+        <p className="text-sm leading-relaxed text-neutral-100">
           When building things, here&apos;s what I like to use.
         </p>
 
