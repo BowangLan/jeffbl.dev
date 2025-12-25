@@ -1,3 +1,5 @@
+"use client";
+
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import { FeaturedProjectsSection } from "@/components/FeaturedProjectsSection";
 import { ExperienceTimelineSection } from "@/components/ExperienceTimelineSection";
@@ -5,6 +7,7 @@ import { HomeNavigation } from "@/components/HomeNavigation";
 import { HomeHero } from "@/components/HomeHero";
 import { ConnectSection } from "@/components/home/ConnectSection";
 import { BuildStackSection } from "@/components/home/BuildStackSection";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -12,16 +15,50 @@ export default function Home() {
       <div className="relative flex min-h-screen flex-col -mx-4 text-[15px] sm:text-base md:-mx-8">
         <HomeNavigation />
 
-        <HomeHero />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <HomeHero />
+        </motion.div>
 
         <div className="space-y-16 pb-16 sm:space-y-20 sm:pb-20">
-          <FeaturedProjectsSection />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <FeaturedProjectsSection />
+          </motion.div>
 
-          <ExperienceTimelineSection />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <ExperienceTimelineSection />
+          </motion.div>
 
-          <BuildStackSection />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <BuildStackSection />
+          </motion.div>
 
-          <ConnectSection />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <ConnectSection />
+          </motion.div>
         </div>
       </div>
     </DefaultLayout>
