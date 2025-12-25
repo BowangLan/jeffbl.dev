@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   const projects = HOME_PAGE_PROJECTS;
 
   return (
-    <DefaultLayout>
+    <DefaultLayout active="/projects">
       <div className="relative flex min-h-screen flex-col -mx-4 text-[15px] sm:text-base md:-mx-8">
         <section className="mx-auto w-full max-w-4xl px-6 pt-12 sm:px-8 sm:pt-16">
           <SectionTitle>Projects</SectionTitle>
