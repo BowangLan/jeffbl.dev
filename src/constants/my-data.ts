@@ -221,6 +221,24 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     content: [],
     current: true,
   },
+  {
+    title: "Resume Editor",
+    slug: "resume-editor",
+    shortDescription: "Latex-based resume editor web app with AI chat",
+    longDescription: "Designed and built a LaTeX-based resume editor web app with AI chat, prioritizing privacy, offline reliability, and trust. Translated insights from 10+ faculty interviews into concrete interaction designs, iterating on prototypes to support complex teaching workflows with transparency and reversibility. Prioritized privacy, offline reliability, and trust, shaping both the technical architecture and the user experience.",
+    websiteUrl: "https://resume-editor-iota.vercel.app",
+    dateRange: {
+      start: "2025-11-01",
+      ongoing: true,
+    },
+    tags: [
+      // TECH_TAGS.react,
+      // TECH_TAGS.typescript,
+      TECH_TAGS.nextjs,
+    ],
+    content: [],
+    current: true,
+  }
 ];
 
 export const HOME_PAGE_EXPERIENCES: Experience[] = [
