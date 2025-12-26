@@ -269,7 +269,7 @@ export function GitHubContributionsSection() {
           </div> */}
 
           {/* Stats display */}
-          <div className="flex flex-row">
+          <div className="flex flex-row flex-wrap gap-1">
             {[0, 1, 2, 3, 4].map((level) => {
               const stats = getLevelStats(level);
               const avgPerDay =
