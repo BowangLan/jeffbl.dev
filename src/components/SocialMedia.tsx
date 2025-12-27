@@ -1,9 +1,10 @@
 "use client";
 
 import va from "@vercel/analytics";
-import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from "@/constants";
+import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL, X_URL } from "@/constants";
 import React from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
 import { IconType } from "react-icons/lib";
 
@@ -28,6 +29,11 @@ const socialMediaData = [
     icon: FaGithub,
     url: GITHUB_URL,
     name: "Github",
+  },
+  {
+    icon: FaXTwitter,
+    url: X_URL,
+    name: "X",
   },
   {
     icon: AiFillMail,

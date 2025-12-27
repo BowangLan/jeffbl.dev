@@ -1,7 +1,8 @@
 import { SocialMedia } from "@/components/SocialMedia";
 import { ExternalLink } from "./Link";
 import { FaFilePdf, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/constants";
+import { FaXTwitter } from "react-icons/fa6";
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL, X_URL } from "@/constants";
 import { GitHubContributionsSection } from "./home/GitHubContributionsSection";
 
 const HERO_TEXT_1 = `
@@ -63,6 +64,17 @@ export function HomeHero() {
             >
               <FaLinkedinIn size={18} className="trans" />
               LinkedIn
+            </a>
+
+            {/* X/Twitter */}
+            <a
+              href={X_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group/external-link text-neutral-400 hover:text-neutral-100 pb-1 hover:scale-105 text-base trans inline-flex items-center gap-2 border-b border-transparent hover:border-neutral-100"
+            >
+              <FaXTwitter size={18} className="trans" />
+              X
             </a>
 
             {/* resume */}

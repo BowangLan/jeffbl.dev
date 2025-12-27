@@ -1,6 +1,7 @@
 export const DOMAIN = "https://jeffbl.dev";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/jeffrey-lan";
 export const GITHUB_URL = "https://github.com/BowangLan";
+export const X_URL = "https://x.com/jeffbl25";
 export const EMAIL_URL = "mailto:blan2@uw.edu";
 export const RESUME_URL = "/Jeffrey Lan Resume.pdf";
 
