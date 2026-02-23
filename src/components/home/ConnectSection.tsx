@@ -1,6 +1,6 @@
 import { SectionTitle } from "@/components/ui/title";
 import { ExternalLink } from "../Link";
-import { EMAIL_1_URL, EMAIL_2_URL, LINKEDIN_URL, X_URL } from "@/constants";
+import { EMAIL_1_URL, LINKEDIN_URL, X_URL } from "@/constants";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
 
@@ -17,10 +17,7 @@ export function ConnectSection() {
             {EMAIL_1_URL}
           </ExternalLink>{" "}
           or{" "}
-          <ExternalLink href={`mailto:${EMAIL_2_URL}`} inline>
-            {EMAIL_2_URL}
-          </ExternalLink>
-          , or connect with me on{" "}
+          connect with me on{" "}
           <ExternalLink href={LINKEDIN_URL} inline>
             {/* <FaLinkedinIn className="mr-1 size-3 text-neutral-500 group-hover/external-link:text-neutral-100 trans" /> */}
             LinkedIn

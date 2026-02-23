@@ -2,11 +2,10 @@ export const DOMAIN = "https://jeffbl.dev";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/jeffrey-lan";
 export const GITHUB_URL = "https://github.com/BowangLan";
 export const X_URL = "https://x.com/jeffbl25";
-export const EMAIL_URL = "mailto:blan2@uw.edu";
+export const EMAIL_URL = "mailto:hello@jeffbl.dev";
 export const RESUME_URL = "/Jeffrey Lan Resume.pdf";
 
-export const EMAIL_1_URL = "blan2@uw.edu";
-export const EMAIL_2_URL = "jeffreylan85917@gmail.com";
+export const EMAIL_1_URL = "hello@jeffbl.dev";
 
 export const COLOR_TEXT = "rgb(239, 242, 250)";
 export const COLOR_BACKGROUND = "rgb(7, 9, 13)";
