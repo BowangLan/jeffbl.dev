@@ -129,6 +129,7 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     shortDescription: "YouTube video summarizer with AI-powered search & knowledge graph",
     longDescription: "Designed and built a YouTube video summarizer with AI-powered search & knowledge graph, prioritizing privacy, offline reliability, and trust. Translated insights from 10+ faculty interviews into concrete interaction designs, iterating on prototypes to support complex teaching workflows with transparency and reversibility. Prioritized privacy, offline reliability, and trust, shaping both the technical architecture and the user experience.",
     websiteUrl: "https://youtubemuse.app",
+    githubUrl: "https://github.com/BowangLan/youtube-muse",
     dateRange: {
       start: "2025-11-01",
       ongoing: true,
@@ -148,6 +149,7 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     shortDescription: "Course searching & planning web app for students at University of Washington",
     longDescription: "Designed an interactive course-exploration experience that replaced static university catalogs with a dynamic, graph-based UI for reasoning about prerequisites and schedules. Built high-fidelity interactive prototypes using ReactFlow to validate UX assumptions before committing to full implementation. Automated live data ingestion to ensure the UI reflected real-time course availability without manual updates.",
     websiteUrl: "https://huskysearch.fyi",
+    githubUrl: "https://github.com/BowangLan/husky-search",
     dateRange: {
       start: "2025-08-01",
       ongoing: true,
@@ -227,6 +229,7 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     shortDescription: "Latex-based resume editor web app with AI chat",
     longDescription: "Designed and built a LaTeX-based resume editor web app with AI chat, prioritizing privacy, offline reliability, and trust. Translated insights from 10+ faculty interviews into concrete interaction designs, iterating on prototypes to support complex teaching workflows with transparency and reversibility. Prioritized privacy, offline reliability, and trust, shaping both the technical architecture and the user experience.",
     websiteUrl: "https://resume-editor-iota.vercel.app",
+    githubUrl: "https://github.com/BowangLan/resume-editor",
     dateRange: {
       start: "2025-11-01",
       ongoing: true,
