@@ -1,0 +1,18 @@
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: transform 0.15s ease-out;
+}
+
+.custom-cursor[data-active="true"] {
+  /* @apply bg-blue-800/50; */
+}

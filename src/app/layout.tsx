@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-// import Particles from "@/components/Particles";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GlobalProviders } from "./providers";
@@ -13,9 +11,6 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 });
-// const Particles = dynamic(() => import("@/components/Particles"), {
-//   ssr: false,
-// });
 
 export const metadata = {
   title: "Jeffrey Lan",
@@ -47,16 +42,7 @@ export default function RootLayout({
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
           />
         </head>
-        <body
-          className={`${fontSans.variable} ${fontMono.variable} bg-neutral-900 min-h-screen max-w-screen overflow-x-hidden flex flex-col font-light antialiased relative`}
-        >
-          {/* background overlay */}
-          {/* <div className="fixed inset-0 bg-linear-to-b from-neutral-800/90 to-neutral-800/50 pointer-events-none" /> */}
-          {/* <Header /> */}
-          {/* <TopBlur /> */}
-          {children}
-          <Footer />
-        </body>
+        {children}
       </html>
     </GlobalProviders>
   );
