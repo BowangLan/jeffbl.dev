@@ -9,7 +9,7 @@ import { BuildStackSection } from "@/components/home/BuildStackSection";
 
 export default function Home() {
   return (
-    <DefaultLayout active="/">
+    <DefaultLayout active="/v0">
       <div>
         <HomeHero />
 

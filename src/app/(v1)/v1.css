@@ -1,18 +1,31 @@
-* {
-  cursor: none;
+/* Hairlines that frame the v1 layout — single source of truth for line color */
+.v1-line {
+  background: rgb(38 38 38); /* neutral-800 */
+}
+
+/* Custom cursor is only active for fine pointers (mouse/trackpad) */
+@media (pointer: fine) {
+  .v1-cursor-root,
+  .v1-cursor-root * {
+    cursor: none;
+  }
 }
 
 .custom-cursor {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   pointer-events: none;
   z-index: 9999;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  transition: transform 0.15s ease-out;
+  background: rgba(255, 255, 255, 0.65);
+  mix-blend-mode: difference;
 }
 
-.custom-cursor[data-active="true"] {
-  /* @apply bg-blue-800/50; */
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none;
+  }
 }
