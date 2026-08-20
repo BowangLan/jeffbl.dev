@@ -20,6 +20,11 @@ export const TECH_TAGS: Record<string, Tag> = {
     name: "Java",
     categories: [],
   },
+  swift: {
+    slug: "swift",
+    name: "Swift",
+    categories: [],
+  },
 
   // styling
   tailwindcss: {
@@ -168,17 +173,19 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     current: true,
   },
   {
-    title: "KG Chat",
-    slug: "kg-chat",
-    shortDescription: "Personal knowledge base with AI chat & MCP support",
+    title: "Anime Tracker",
+    slug: "anime-tracker",
+    shortDescription:
+      "Anime schedule dashboard for tracking airing shows by weekday",
     longDescription:
-      "KG Chat is a personal knowledge base where an AI chat interface can explore and modify structured knowledge: notes, tables, and the relationships between them.\n\nArchitected a custom MCP server exposing 15+ scoped tools, so AI agents can safely read and write user data with explicit permissions and debuggable behavior.\n\nEnd-to-end auth and access control with Clerk and Convex keep multi-user workflows predictable across the UI, APIs, and agent actions.",
-    websiteUrl: "https://kgchat.app",
+      "Anime Tracker organizes currently airing anime by the weekday each show updates, with at-a-glance episode numbers, season progress, and countdowns calculated in the viewer's local timezone.\n\nAniList's GraphQL API supplies the live seasonal catalog, fetched on the server and revalidated hourly. Favorites and episode watch history stay local, so the app needs no account or backend.\n\nBuilt with Next.js 16 and React 19, with dedicated schedule, discovery, search, favorites, and anime detail views.",
+    websiteUrl: "https://anime-tracker-phi-two.vercel.app",
+    githubUrl: "https://github.com/BowangLan/anime-tracker",
     dateRange: {
-      start: "2025-11-01",
+      start: "2026-07-13",
       ongoing: true,
     },
-    tags: [TECH_TAGS.nextjs, TECH_TAGS.convex, TECH_TAGS.mcp],
+    tags: [TECH_TAGS.nextjs, TECH_TAGS.react, TECH_TAGS.shadcn],
     content: [],
     current: true,
   },
@@ -204,10 +211,10 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     shortDescription: "Lightweight music player built on top of YouTube",
     longDescription:
       "YouTube Muse turns YouTube into a focused, lightweight music player: no feed, no autoplay rabbit holes, just your music.\n\nStructured as a Bun + Turborepo monorepo shipping two targets from one codebase: a Next.js web app and an Electron desktop shell.\n\nIntegrates both official and unofficial YouTube APIs for search, playback, and library management.",
-    websiteUrl: "https://youtubemuse.app",
+    websiteUrl: "https://youtube-muse.vercel.app",
     githubUrl: "https://github.com/BowangLan/youtube-muse",
     dateRange: {
-      start: "2025-11-01",
+      start: "2025-11-27",
       ongoing: true,
     },
     tags: [TECH_TAGS.nextjs, TECH_TAGS.electron, TECH_TAGS.motion],
@@ -215,18 +222,18 @@ export const HOME_PAGE_PROJECTS: Project[] = [
     current: true,
   },
   {
-    title: "Resume Editor",
-    slug: "resume-editor",
-    shortDescription: "LaTeX-based resume editor web app with AI-powered PDF import",
+    title: "GHub",
+    slug: "ghub",
+    shortDescription:
+      "Native macOS app for monitoring local repositories, pull requests, and CI",
     longDescription:
-      "A LaTeX resume editor that removes the LaTeX: upload an existing PDF resume and AI parsing (Vercel AI SDK) converts it into structured, editable form fields.\n\nA split-view editor shows the form on one side and live syntax-highlighted LaTeX output on the other, with one-click export to .tex.\n\nBuilt with Next.js 16, React 19, Tailwind v4, shadcn/ui, and Zustand.",
-    websiteUrl: "https://resume-editor-iota.vercel.app",
-    githubUrl: "https://github.com/BowangLan/resume-editor",
+      "GHub is a native macOS menu-bar app that keeps the state of local Git repositories visible at a glance: current branches, working-tree changes, ahead/behind status, open pull requests, and CI results.\n\nIt combines local Git data with GitHub CLI results, stores snapshots in SQLite, and refreshes multiple watched repositories without managing a separate set of GitHub credentials.\n\nBuilt in SwiftUI with focused views for repository status, branch and PR references, diff details, and quick actions including squash merges.",
+    githubUrl: "https://github.com/BowangLan/ghub",
     dateRange: {
-      start: "2025-11-01",
+      start: "2026-05-05",
       ongoing: true,
     },
-    tags: [TECH_TAGS.nextjs, TECH_TAGS.shadcn],
+    tags: [TECH_TAGS.swift, TECH_TAGS.git, TECH_TAGS.github],
     content: [],
     current: true,
   },
@@ -234,6 +241,36 @@ export const HOME_PAGE_PROJECTS: Project[] = [
 
 // Earlier projects, shown on the full projects list and detail pages.
 export const ARCHIVE_PROJECTS: Project[] = [
+  {
+    title: "KG Chat",
+    slug: "kg-chat",
+    shortDescription: "Personal knowledge base with AI chat & MCP support",
+    longDescription:
+      "KG Chat is a personal knowledge base where an AI chat interface can explore and modify structured knowledge: notes, tables, and the relationships between them.\n\nArchitected a custom MCP server exposing 15+ scoped tools, so AI agents can safely read and write user data with explicit permissions and debuggable behavior.\n\nEnd-to-end auth and access control with Clerk and Convex keep multi-user workflows predictable across the UI, APIs, and agent actions.",
+    websiteUrl: "https://kgchat.app",
+    dateRange: {
+      start: "2025-11-01",
+      ongoing: true,
+    },
+    tags: [TECH_TAGS.nextjs, TECH_TAGS.convex, TECH_TAGS.mcp],
+    content: [],
+  },
+  {
+    title: "Resume Editor",
+    slug: "resume-editor",
+    shortDescription:
+      "LaTeX-based resume editor web app with AI-powered PDF import",
+    longDescription:
+      "A LaTeX resume editor that removes the LaTeX: upload an existing PDF resume and AI parsing (Vercel AI SDK) converts it into structured, editable form fields.\n\nA split-view editor shows the form on one side and live syntax-highlighted LaTeX output on the other, with one-click export to .tex.\n\nBuilt with Next.js 16, React 19, Tailwind v4, shadcn/ui, and Zustand.",
+    websiteUrl: "https://resume-editor-iota.vercel.app",
+    githubUrl: "https://github.com/BowangLan/resume-editor",
+    dateRange: {
+      start: "2025-12-05",
+      ongoing: true,
+    },
+    tags: [TECH_TAGS.nextjs, TECH_TAGS.shadcn],
+    content: [],
+  },
   {
     title: "Tourius",
     slug: "tourius",
@@ -255,9 +292,10 @@ export const ARCHIVE_PROJECTS: Project[] = [
       "Live global flight tracker with a GPU-rendered map and historical replay",
     longDescription:
       "Flytie renders live global air traffic from ADS-B Exchange on a GPU-accelerated map (deck.gl + MapLibre), enriched with flight metadata from AeroDataBox.\n\nSupports historical replay with timeline scrubbing, weather radar overlays, and ARTCC airspace boundaries.\n\nBuilt with TanStack Start, React 19, Convex, and Redis caching, running on Bun.",
+    websiteUrl: "https://flytie.vercel.app",
     githubUrl: "https://github.com/BowangLan/flytie",
     dateRange: {
-      start: "2026-02-01",
+      start: "2026-02-27",
       end: "2026-03-01",
     },
     tags: [TECH_TAGS.tanstackstart, TECH_TAGS.convex, TECH_TAGS.redis],
@@ -272,7 +310,7 @@ export const ARCHIVE_PROJECTS: Project[] = [
       "A Chrome extension (Manifest V3) that adds the organization layer ChatGPT never had: folders, pinning, full-text search with a command palette, and bulk actions across conversations.\n\nOne of my longest-lived side projects, maintained since 2023 across multiple ChatGPT UI overhauls.",
     githubUrl: "https://github.com/BowangLan/chatgpt-archive",
     dateRange: {
-      start: "2023-06-01",
+      start: "2023-06-23",
       ongoing: true,
     },
     tags: [TECH_TAGS.chromeextension, TECH_TAGS.react, TECH_TAGS.typescript],
@@ -281,12 +319,13 @@ export const ARCHIVE_PROJECTS: Project[] = [
   {
     title: "HTMS",
     slug: "htms",
-    shortDescription: "Python web-scraping library where scrapers are written as HTML",
+    shortDescription:
+      "Python web-scraping library where scrapers are written as HTML",
     longDescription:
       "HTMS is a small Python library built on an unusual idea: declare web-scraping tasks in HTML-like markup instead of imperative code. Requests, pagination, XPath extraction, follow-up requests, and JSON output are all expressed as tags, then executed with a single command.\n\nA design exercise in building a declarative DSL, published as a pip-installable package.",
     githubUrl: "https://github.com/BowangLan/htms",
     dateRange: {
-      start: "2024-08-01",
+      start: "2024-08-27",
       end: "2024-09-01",
     },
     tags: [TECH_TAGS.python],
@@ -295,12 +334,13 @@ export const ARCHIVE_PROJECTS: Project[] = [
   {
     title: "EmojiCloud",
     slug: "emoji-cloud",
-    shortDescription: "Open-source emoji word-cloud visualization library for Python",
+    shortDescription:
+      "Open-source emoji word-cloud visualization library for Python",
     longDescription:
       "EmojiCloud generates word clouds out of emoji: rectangle, ellipse, and image-masked canvases, support for seven emoji vendors, and customizable color handling.\n\nBuilt in 2022 as my first polished open-source Python library, with a full README, examples, and published package.",
     githubUrl: "https://github.com/BowangLan/emoji-cloud-engine",
     dateRange: {
-      start: "2022-07-01",
+      start: "2022-07-27",
       end: "2022-12-01",
     },
     tags: [TECH_TAGS.python],
@@ -309,7 +349,8 @@ export const ARCHIVE_PROJECTS: Project[] = [
   {
     title: "Better Grades",
     slug: "better-grades",
-    shortDescription: "Chrome extension that reskins and enhances Canvas LMS for students",
+    shortDescription:
+      "Chrome extension that reskins and enhances Canvas LMS for students",
     longDescription:
       "Better Grades rebuilds the Canvas LMS experience inside a Chrome extension: course dashboards, assignment sheets with score rings and statistics, a weekly calendar, file trees, announcements, and dark mode.\n\nAn earlier chapter of a six-year arc of building tools for UW students that later led to C3 and Husky Search.",
     dateRange: {
@@ -328,6 +369,21 @@ export const ALL_PROJECTS: Project[] = [
 
 export const HOME_PAGE_EXPERIENCES: Experience[] = [
   {
+    title: "Design Engineer",
+    slug: "design-engineer-geospatios",
+    organization: "Geospatios",
+    location: "Palo Alto, CA",
+    shortDescription:
+      "Designing and engineering Air-OS, applying spatial data analysis, computational modeling, and scientific programming to geospatial platform development.",
+    longDescription:
+      "Leading the design, architecture, and implementation of Air-OS, a complex geospatial software platform. Applying an astronomy background in computational modeling, spatial data analysis, coordinate systems, image processing, numerical methods, and scientific programming to guide platform development. Using experience in data visualization, algorithm development, systems design, and research planning to shape both the product's implementation and its long-term technical direction.",
+    content: "",
+    dateRange: {
+      start: "2026-03-24",
+      ongoing: true,
+    },
+  },
+  {
     title: "Lead Software Engineer",
     slug: "lead-swe-performance-formula",
     organization: "Performance Formula",
@@ -339,7 +395,8 @@ export const HOME_PAGE_EXPERIENCES: Experience[] = [
     content: "",
     dateRange: {
       start: "2025-04-01",
-      ongoing: true,
+      end: "2026-03-20",
+      ongoing: false,
     },
   },
   {
